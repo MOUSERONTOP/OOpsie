@@ -974,6 +974,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/K1LAS1K/Ultimate-Flin
 
 local Divider = universal_tab:CreateDivider()
 
+local Button = universal_tab:CreateButton({
+   Name = "MoonHub",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ATKLlama/Moon-Hub/refs/heads/main/MoonHub.lua.txt"))()
+   end,
+})
+
+local Divider = universal_tab:CreateDivider()
+
 
 ------------------------------
 ----------------------------------
