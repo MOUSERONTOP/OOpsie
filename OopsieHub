@@ -444,6 +444,18 @@ local Button = teleports_tab:CreateButton({
 
 local Divider = teleports_tab:CreateDivider()
 
+local Section = teleports_tab:CreateSection("Christmas Update")
+
+local Divider = teleports_tab:CreateDivider()
+
+local Button = teleports_tab:CreateButton({
+   Name = "Christmas Tree Farm",
+   Callback = function()
+   Plr.Character:MoveTo(Vector3.new(-5681.93994140625, 14.918641090393066, -5785.67626953125))
+   end,
+})
+
+local Divider = teleports_tab:CreateDivider()
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
@@ -537,7 +549,7 @@ end
 })
 
 local Button = carspawner_tab:CreateButton({
-   Name = "Bring Car To Paint Ship",
+   Name = "Bring Car To Paint Shop",
    Callback = function()
 if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
 	game.Workspace:FindFirstChild(Plr.Name.."sCar"):MoveTo(Vector3.new(-1676.801025390625, 61.70620346069336, 32.692108154296875))
@@ -546,6 +558,8 @@ end
 })
 
 local Section = carspawner_tab:CreateSection("Note: *Bring Car To Player* Doesn't always work.")
+
+local Section = carspawner_tab:CreateSection("Note: *Bring Car To Paint Shop* Doesn't always work.")
 
 local Divider = carspawner_tab:CreateDivider()
 
@@ -952,9 +966,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/main.lu
 local Divider = universal_tab:CreateDivider()
 
 local Button = universal_tab:CreateButton({
-   Name = "Fling All",
+   Name = "MULTI-FLING",
    Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1LAS1K/Ultimate-Fling-GUI/main/flingscript.lua"))()
    end,
 })
 
@@ -966,3 +980,12 @@ local Divider = universal_tab:CreateDivider()
 -----------------------------------------
 
 local Section = other_tab:CreateSection("Note: This tab will be updated soon")
+
+local Button = other_tab:CreateButton({
+   Name = "Fling All",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+   end,
+})
+
+local Divider = other_tab:CreateDivider()
