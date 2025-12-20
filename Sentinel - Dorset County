@@ -11,7 +11,7 @@ game.StarterGui:SetCore("SendNotification", {
 local Plr = game.Players.LocalPlayer
 
 local Window = Rayfield:CreateWindow({
-   Name = "",
+   Name = "Sentinel",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "WELCOME TO SENTINEL",
    LoadingSubtitle = "Loading...",
