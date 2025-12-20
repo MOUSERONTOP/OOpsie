@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 game.StarterGui:SetCore("SendNotification", {
    Title = "Sentinel - Dorset County",
-   Text = "Loading client...",
+   Text = "Loading cheat...",
    Icon = "",
    Duration = 10
 })
@@ -64,6 +64,12 @@ local universal_tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
 local Section = main_tab:CreateSection("ChatAd: SENTINEL IS THE BEST CHEAT FOR DORSET COUNTY")
 
 local Divider = main_tab:CreateDivider()
+
+local Section = main_tab:CreateSection("Currently Supported Executors: JJSploit / Solara - Unsure about any other executors")
+
+local Divider = main_tab:CreateDivider()
+
+local Section = main_tab:CreateSection("Client Status: 🟢")
 
 local Button = main_tab:CreateButton({
    Name = "KILL UI",
