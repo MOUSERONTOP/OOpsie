@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 game.StarterGui:SetCore("SendNotification", {
    Title = "Sentinel - Dorset County",
-   Text = "Loading cheat...",
+   Text = "Loading client...",
    Icon = "",
    Duration = 10
 })
