@@ -1,20 +1,21 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Plr = game.Players.LocalPlayer
-
-Rayfield:Notify({
-   Title = "ANTI CHEAT V2 IS ASS",
-   Content = "MAJOBE NEEDS TO HIRE A NEW SCRIPTER THAT CAN ACTUALLY MAKE A WORKING ANTI CHEAT",
-   Duration = 6.5,
-   Image = 4483362458,
+game.StarterGui:SetCore("SendNotification", {
+   Title = "Sentinel - Dorset County",
+   Text = "Loading cheat...",
+   Icon = "",
+   Duration = 10
 })
 
+
+local Plr = game.Players.LocalPlayer
+
 local Window = Rayfield:CreateWindow({
-   Name = "OOPSIE HUB",
+   Name = "",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "WELCOME TO OOPSIE HUB",
+   LoadingTitle = "WELCOME TO SENTINEL",
    LoadingSubtitle = "Loading...",
-   ShowText = "WELCOME TO OOPSIE HUB", -- for mobile users to unhide rayfield, change if you'd like
+   ShowText = "WELCOME TO SENTINEL", -- for mobile users to unhide rayfield, change if you'd like
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
@@ -25,7 +26,7 @@ local Window = Rayfield:CreateWindow({
    ConfigurationSaving = {
       Enabled = true,
       FolderName = FileName, -- Create a custom folder for your hub/game
-      FileName = "OopsieHub"
+      FileName = "SentinelData"
    },
 
    Discord = {
@@ -36,19 +37,19 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "OopsieHub By Ramon",
+      Title = "Sentinel By Mouser",
       Subtitle = "Key System",
       Note = "Welcome, please enter the correct key to continue.", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"dafty"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"SentinelThaBest"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
 local main_tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
-local Section = main_tab:CreateSection("Welcome to OOPSIEHub")
+local Section = main_tab:CreateSection("Welcome to Sentinel")
 
 local plr_tab = Window:CreateTab("Player", 4483362458) -- Title, Image
 
@@ -60,7 +61,7 @@ local other_tab = Window:CreateTab("Other", 4483362458) -- Title, Image
 
 local universal_tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
 
-local Section = main_tab:CreateSection("ChatAd: OOPSIE HUB IS THE BEST CHEAT FOR DORSET COUNTY")
+local Section = main_tab:CreateSection("ChatAd: SENTINEL IS THE BEST CHEAT FOR DORSET COUNTY")
 
 local Divider = main_tab:CreateDivider()
 
@@ -71,6 +72,13 @@ local Button = main_tab:CreateButton({
 	game.Workspace:FindFirstChild("Hhint"):Destroy()
 end
 Rayfield:Destroy()
+   end,
+})
+
+local Button = main_tab:CreateButton({
+   Name = "REJOIN",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/MOUSERONTOP/Rejoin/refs/heads/main/RejoinServer"))()
    end,
 })
 
@@ -92,9 +100,6 @@ end
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
-
 local Button = teleports_tab:CreateButton({
    Name = "Dominos Outside",
    Callback = function()
@@ -108,8 +113,6 @@ local Button = teleports_tab:CreateButton({
    Plr.Character:MoveTo(Vector3.new(-1120.2686767578125, -122.69189453125, 408.1175842285156))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Fire Station Outside",
@@ -125,8 +128,6 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "St John Hospital Outside",
    Callback = function()
@@ -141,8 +142,6 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Liko Outside",
    Callback = function()
@@ -156,8 +155,6 @@ local Button = teleports_tab:CreateButton({
    Plr.Character:MoveTo(Vector3.new(-1273.10302734375, -228.19483947753906, -650.8002319335938))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Police Outside",
@@ -180,8 +177,6 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Red Bus Depot Outside",
    Callback = function()
@@ -195,8 +190,6 @@ local Button = teleports_tab:CreateButton({
    Plr.Character:MoveTo(Vector3.new(-5536.1064453125, -160.75982666015625, -7388.134765625))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Hine Motors Paint Shop",
@@ -219,8 +212,6 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Tesco Petrol Station Outside",
    Callback = function()
@@ -235,16 +226,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Construction Site",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-3864.626220703125, 18.00525665283203, -3549.304931640625))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Car Park Spawn",
@@ -253,16 +240,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Broken Caravan Site",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-4351.03369140625, 22.007970809936523, -3332.907470703125))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Allotment Gardens",
@@ -271,16 +254,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Dirt Car Park",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-4660.869140625, 27.470609664916992, -2975.72314453125))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Cow Barn",
@@ -289,16 +268,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Saxon Grange",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-3368.94873046875, 22.329687118530273, -3530.347900390625))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Farm house",
@@ -307,8 +282,6 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Nice House",
    Callback = function()
@@ -316,16 +289,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Random Barn",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-3090.486328125, 16.71953773498535, -3430.016845703125))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Skate Park",
