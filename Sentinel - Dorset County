@@ -57,7 +57,7 @@ local teleports_tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
 
 local carspawner_tab = Window:CreateTab("Vehicles", 4483362458) -- Title, Image
 
-local other_tab = Window:CreateTab("Other", 4483362458) -- Title, Image
+local visuals_tab = Window:CreateTab("Visuals", 4483362458) -- Title, Image
 
 local universal_tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
 
@@ -881,9 +881,72 @@ local Button = carspawner_tab:CreateButton({
 local Divider = carspawner_tab:CreateDivider()
 
 local Button = carspawner_tab:CreateButton({
-   Name = "2023 Vioci S Way Pure",
+   Name = "2011 Land Loader Freelander",
    Callback = function()
-   game.ReplicatedStorage.SpawnCar:FireServer("2023 Vioci S Way Pure")
+   game.ReplicatedStorage.SpawnCar:FireServer("2011 Land Loader Freelander")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "Freelander Panda Car",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("Freelander Panda Car")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2011 Land Loader Freelander HSE",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2011 Land Loader Freelander HSE")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2025 Pandora CLA",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2025 Pandora CLA")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2012 Vlo S60",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2012 Vlo S60")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2019 BTM i3",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2019 BTM i3")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2016 Happi Bin Lorry",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2016 Happi Bin Lorry")
+   end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "2015 Plume Poote Wraith",
+   Callback = function()
+   game.ReplicatedStorage.SpawnCar:FireServer("2015 Plume Poote Wraith")
    end,
 })
 
@@ -901,8 +964,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Unive
    end,
 })
 
-local Divider = universal_tab:CreateDivider()
-
 local Button = universal_tab:CreateButton({
    Name = "Owl Hub Aimbot",
    Callback = function()
@@ -911,16 +972,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/maste
    end,
 })
 
-local Divider = universal_tab:CreateDivider()
-
 local Button = universal_tab:CreateButton({
    Name = "Sussy Animations",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ramonnew199-lgtm/EXED/refs/heads/main/SusANIMS"))()
    end,
 })
-
-local Divider = universal_tab:CreateDivider()
 
 local Button = universal_tab:CreateButton({
    Name = "Infinite Yield",
@@ -929,12 +986,17 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield
    end,
 })
 
-local Divider = universal_tab:CreateDivider()
-
 local Button = universal_tab:CreateButton({
    Name = "cmd admin commands",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/main.lua"))()
+   end,
+})
+
+local Button = universal_tab:CreateButton({
+   Name = "Fling All",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
    end,
 })
 
@@ -947,18 +1009,59 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/K1LAS1K/Ultimate-Flin
    end,
 })
 
-local Divider = universal_tab:CreateDivider()
 ------------------------------
 ----------------------------------
 -----------------------------------------
 
-local Section = other_tab:CreateSection("Note: This tab will be updated soon")
-
-local Button = other_tab:CreateButton({
-   Name = "Fling All",
-   Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
-   end,
+local Toggle = visuals_tab:CreateToggle({
+	Name = "ESP",
+	CurrentValue = false,
+	Flag = "ESPToggleOnOff", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		if Value == true then
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				local ESPHigh = Instance.new("Highlight")
+				ESPHigh.FillColor = Color3.new(0.0313725, 1, 0.352941)
+				ESPHigh.OutlineColor = Color3.new(1, 1, 1)
+				ESPHigh.Name = "ESP"
+				ESPHigh.FillTransparency = 0.5
+				ESPHigh.OutlineTransparency = 0
+				ESPHigh.DepthMode = "AlwaysOnTop"
+				ESPHigh.Adornee = v
+					if v:FindFirstChild("HumanoidRootPart") then
+						ESPHigh.Parent = v
+				end
+			end
+		else
+			local Wrk = game.Workspace:GetChildren()
+			for i, v in pairs(Wrk) do
+				if v:FindFirstChild("ESP") then
+					v.ESP:Destroy()
+				end
+			end
+		end
+	end,
 })
 
-local Divider = other_tab:CreateDivider()
+local Button = visuals_tab:CreateButton({
+	Name = "DEBUG ESP",
+	Callback = function()
+local wrk = game.Workspace:GetChildren()
+for i, v in pairs(wrk) do
+	if v:FindFirstChild("HumanoidRootPart") then
+		if v:FindFirstChild("ESP") then
+			v.ESP:Destroy()
+		end
+	end
+end
+
+	end,
+})
+
+
+
+------------------------------
+----------------------------------
+-----------------------------------------
+
