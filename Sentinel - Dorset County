@@ -309,16 +309,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Pool",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-715.0615234375, 55.77273941040039, -384.2442321777344))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "HalfMoon",
@@ -327,16 +323,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Royal Chase Hotel",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-2545.1455078125, 24.217241287231445, -2519.20703125))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "FootBall Field",
@@ -345,16 +337,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "KFC",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-1054.5595703125, 66.74828338623047, 619.7166748046875))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Longmead Vets",
@@ -363,16 +351,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Paint Shop",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-1689.60888671875, 61.456626892089844, 53.01268005371094))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Shaftesbury School Road",
@@ -381,16 +365,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Interrior House 1",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-1141.3914794921875, 57.722373962402344, -235.41529846191406))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Interrior House 2",
@@ -399,16 +379,12 @@ local Button = teleports_tab:CreateButton({
    end,
 })
 
-local Divider = teleports_tab:CreateDivider()
-
 local Button = teleports_tab:CreateButton({
    Name = "Interrior House 3",
    Callback = function()
    Plr.Character:MoveTo(Vector3.new(-1091.3609619140625, 58.35414123535156, -293.7512512207031))
    end,
 })
-
-local Divider = teleports_tab:CreateDivider()
 
 local Button = teleports_tab:CreateButton({
    Name = "Interrior House 4",
@@ -504,6 +480,60 @@ local Divider = plr_tab:CreateDivider()
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
+
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "Control All Vehicles!",
+   Callback = function()
+      local Wrk = game.Workspace:GetChildren()
+
+for i, v in pairs(Wrk) do
+	if v:IsA("Model") then
+		if v:FindFirstChild("DriveSeat") then
+			local GuiC = v:FindFirstChild("A-Chassis Tune"):WaitForChild("A-Chassis Interface"):Clone()
+			GuiC.Parent = Plr.PlayerGui
+		end
+	end
+end
+  end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
+
+local Button = carspawner_tab:CreateButton({
+   Name = "Remote Control Car",
+   Callback = function()
+      if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+	if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune") then
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune")["A-Chassis Interface"] then
+			local GUIC = game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("A-Chassis Tune")["A-Chassis Interface"]:Clone()
+			GUIC.Parent = Plr.PlayerGui
+		end
+
+	end
+	
+end
+  end,
+})
+
+local Button = carspawner_tab:CreateButton({
+   Name = "Hide Driver ProximityPrompt",
+   Callback = function()
+if game.Workspace:FindFirstChild(Plr.Name.."sCar") then
+	if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat") then
+		if game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat")["ProximityPrompt"] then
+			game.Workspace:FindFirstChild(Plr.Name.."sCar"):FindFirstChild("DriveSeat")["ProximityPrompt"].Enabled = false
+		end
+
+	end
+	
+end
+  end,
+})
+
+local Divider = carspawner_tab:CreateDivider()
 
 local Button = carspawner_tab:CreateButton({
    Name = "Teleport To Car",
