@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Sentinel - Dorset County",
 	Text = "Loading cheat...",
-	Icon = "",
+	Icon = "http://www.roblox.com/asset/?id=10637290374",
 	Duration = 10
 })
 
